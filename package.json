@@ -1,0 +1,27 @@
+{
+  "name": "starmask-forwarder",
+  "version": "1.0.0",
+  "description": "Forwarding page for one-click onboarding",
+  "homepage": "https://github.com/starcoinorg/starmask-forwarder#readme",
+  "bugs": {
+    "url": "https://github.com/starcoinorg/starmask-forwarder/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/starcoinorg/starmask-forwarder.git"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "license": "MIT",
+  "files": [
+    "/src"
+  ],
+  "scripts": {
+    "start": "static-server ./src --port 9030"
+  },
+  "devDependencies": {
+    "static-server": "^2.2.1"
+  }
+}
