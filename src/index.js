@@ -14,7 +14,7 @@ const getParentWindow = () => {
 }
 
 const receiveParentMessage = (event) => {
-  if (event.data.type === 'metamask:registrationCompleted') {
+  if (event.data.type === 'starmask:registrationCompleted') {
     console.log('Onboarding complete; closing window')
     window.close()
   } else {
@@ -31,15 +31,15 @@ const receiveMessage = (event) => {
 }
 
 const initialize = () => {
-  if (window.web3 === undefined) {
+  if (window.starcoin === undefined) {
     return setTimeout(() => window.location.reload(), refreshInterval)
   }
 
   parentWindow = getParentWindow()
   window.addEventListener('message', receiveMessage)
   reloadParentInterval = setInterval(() => {
-    console.debug('Sending metamask:reload message')
-    parentWindow.postMessage({ type: 'metamask:reload' }, '*')
+    console.debug('Sending starmask:reload message')
+    parentWindow.postMessage({ type: 'starmask:reload' }, '*')
   }, parentMessageInterval)
 }
 window.addEventListener('DOMContentLoaded', initialize)
