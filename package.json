@@ -19,7 +19,7 @@
     "/src"
   ],
   "scripts": {
-    "start": "static-server ./src --port 9030"
+    "start": "static-server ./src --port 9032"
   },
   "devDependencies": {
     "static-server": "^2.2.1"
